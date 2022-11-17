@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component  // говрит спрингу, что это бин
 public class AnimalsCage {
 
-    @Autowired
-    @Qualifier("dog")
+    @Autowired   //говорит спрингу, что сюда надо инжектнуть бин типа энимал
+    @Qualifier("dog")    //определяет , что этот внедряемый энимал долж быть дог (иначе будет конфликт)
     private Animal animal;
 
     @Autowired
